@@ -10,7 +10,7 @@ As for 4070tis, average processing time per image is reduced from ~35s to ~7s. G
 addition infomation:
 ~35s: time cost of processing images using the original ComfyUI-SeedVR2_VideoUpscaler repo
 ~7s: time cost of processing images using this repo with batch.py
-input image size is 1440*2560, output size use the value with in the file batch.py.
+input image size is 1440*2560, output size use the value with in the file batch_img.py.
 
 
 FYI:Since the original code had a high degree of integration, this code only changed the implementation of the middle layer code to improve speed, without making a large-scale refactoring of the underlying code.
