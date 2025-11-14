@@ -1,9 +1,21 @@
 # SeedVR2_VideoUpscaler_standalone implement based on the ComfyUI-SeedVR2_VideoUpscaler repo
 
-Main changes:
-add batch image processing script-batch_img.py, so that you can processing image sequences much faster than the original repo.
-As for 4070tis, average processing time is reduced from ~35s to ~7s.
-Since the original code had a high degree of integration, this code only changed the implementation of the middle layer code to improve speed, without making a large-scale refactoring of the underlying code.
+Main changelog:
+
+1. add batch image processing script-batch_img.py, so that you can processing image sequences much faster than the original repo.
+
+performance boost:
+As for 4070tis, average processing time per image is reduced from ~35s to ~7s. Guess this should be enough for effieicnt sr work.
+
+addition infomation:
+~35s: time cost of processing images using the original ComfyUI-SeedVR2_VideoUpscaler repo
+~7s: time cost of processing images using this repo with batch.py
+input image size is 1440*2560, output size use the value with in the file batch.py.
+
+
+FYI:Since the original code had a high degree of integration, this code only changed the implementation of the middle layer code to improve speed, without making a large-scale refactoring of the underlying code.
+If needed, i am also willing to open new version.
+
 
 
 [![View Code](https://img.shields.io/badge/📂_View_Code-GitHub-181717?style=for-the-badge&logo=github)](https://github.com/numz/ComfyUI-SeedVR2_VideoUpscaler)
